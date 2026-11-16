@@ -46,3 +46,10 @@ children. `apply_mask` walks the tree in the same order and assigns masks by
 traversal position, not by name, so two sibling entries that happen to share a
 name still receive distinct values. Negative masks, boolean masks, and
 non-`Entry` roots raise `PermissionError_`.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+

@@ -1,6 +1,6 @@
 [project]
 name = "recursive-permission-inheritor"
-version = "0.1.0"
+version = "0.1.1"
 description = "Sets permission masks recursively while preserving explicitly set overrides."
 requires-python = ">=3.10"
 dependencies = []
